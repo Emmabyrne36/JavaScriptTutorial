@@ -738,8 +738,8 @@ let lazy = {
 
 // This one found the food
 speedy.eat("apple");
-console.log( speedy.stomach ); // apple
+// console.log( speedy.stomach ); // apple
 
 // This one also has it, why? fix please.
-console.log( lazy.stomach ); // apple
+// console.log( lazy.stomach ); // apple
 // fixed by giving each hamster their own stomach
