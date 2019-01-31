@@ -1,0 +1,153 @@
+#field {
+    width: 200px;
+    height: 150px;
+    border: 10px solid black;
+    background-color: #00ff00;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+#ball {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 1s all;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Menu and [X] part CSS */
+#greenArrow {
+    display: inline;
+    color: darkgreen;
+}
+
+#menu {
+    cursor: pointer;
+}
+
+h3 {
+    margin: 0;
+    padding-bottom: .3em;
+    font-size: 1.1em;
+}
+
+p {
+    margin: 0;
+    padding: 0 0 .5em;
+}
+
+.pane {
+    background: #edf5e1;
+    padding: 10px 20px 10px;
+    border-top: solid 2px #c4df9b;
+    position: relative;
+}
+
+.remove-button {
+    font-size: 110%;
+    color: darkred;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    top: 0;
+}
+
+/* Carousel CSS */
+.carousel {
+    position: relative;
+    width: 470px;
+    padding: 10px 40px;
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    background: #eee;
+}
+
+.carousel img {
+    width: 130px;
+    height: 130px;
+    /* make it block to remove space around images */
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 60px;
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.arrow:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+.prev {
+    left: 7px;
+}
+
+.next {
+    right: 7px;
+}
+
+.gallery {
+    width: 390px;
+    overflow: hidden;
+}
+
+.gallery ul {
+    height: 130px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    /* remove white-space between inline-block'ed li */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    font-size: 0;
+}
+
+.gallery li {
+    display: inline-block;
+}
+
+.tree span:hover {
+    font-weight: bold;
+  }
+
+  .tree span {
+    cursor: pointer;
+  }
+
+
+  /* Sortable Table */
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 4px;
+  }
+  th {
+    cursor: pointer;
+  }
+  th:hover {
+    background: yellow;
+  }

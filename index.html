@@ -1,28 +1,180 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <!-- <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AixcH93GJ4uBd_CimDK4hgDkA8OgFGacaTnOwoIvknaK_8PIXo6J1ma_NE0USGgY'></script> -->
-</head>
+  </head>
 
-<body>
-    <script src="https://unpkg.com/mathjs@5.0.0/dist/math.min.js"></script>
-    <script src="part1.js"></script>
-    <script src="part1End.js"></script>
-    <script src="part2_Browser.js"></script>
-
+  <body style="height:2000px">
     <div class="container">
-        <br>
-        <h1>Look in the log ----> </h1>
-        <img src="data:image/png;base64,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"
-            alt="jsLogo">
+      <br />
+      <div class="jumbotron"><h1>Look in the log ~~~~></h1></div>
 
-    </div>
+      <br /><br />
 
-</body>
+      <div id="field" onclick="moveBall(event)">
+        <img src="https://en.js.cx/clipart/ball.svg" id="ball" /> . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . .
+      </div>
+
+      <br /><br />
+
+      <div id="menu" onclick="showHide()">
+        <div id="greenArrow">▶</div>
+        ▼ Sweeties (click me)!
+      </div>
+      <ul id="listMenu">
+        <li>Cake</li>
+        <li>Donut</li>
+        <li>Honey</li>
+      </ul>
+
+      <div id="paneContainer">
+        <div class="pane">
+          <!-- <p onclick="removeP(event)" class="remove-button">[X]</p> -->
+          <h3>Horse</h3>
+          <p>
+            The horse is one of two extant subspecies of Equus ferus. It is an
+            odd-toed ungulate mammal belonging to the taxonomic family Equidae.
+            The horse has evolved over the past 45 to 55 million years from a
+            small multi-toed creature, Eohippus, into the large, single-toed
+            animal of today.
+          </p>
+          <button class="remove-button">[x]</button>
+        </div>
+        <div class="pane">
+          <!-- <p onclick="removeP(event)" class="remove-button">[X]</p> -->
+          <h3>Donkey</h3>
+          <p>
+            The donkey or ass (Equus africanus asinus) is a domesticated member
+            of the horse family, Equidae. The wild ancestor of the donkey is the
+            African wild ass, E. africanus. The donkey has been used as a
+            working animal for at least 5000 years.
+          </p>
+          <button class="remove-button">[x]</button>
+        </div>
+        <div class="pane">
+          <!-- <p onclick="removeP(event)" class="remove-button">[X]</p> -->
+          <h3>Cat</h3>
+          <p>
+            The domestic cat (Latin: Felis catus) is a small, typically furry,
+            carnivorous mammal. They are often called house cats when kept as
+            indoor pets or simply cats when there is no need to distinguish them
+            from other felids and felines. Cats are often valued by humans for
+            companionship and for their ability to hunt vermin.
+          </p>
+          <button class="remove-button">[x]</button>
+        </div>
+      </div>
+
+      <br /><br />
+      <div id="carousel" class="carousel">
+        <button class="arrow prev">⇦</button>
+        <div class="gallery">
+          <ul class="images">
+            <li><img src="https://en.js.cx/carousel/1.png" /></li>
+            <li><img src="https://en.js.cx/carousel/2.png" /></li>
+            <li><img src="https://en.js.cx/carousel/3.png" /></li>
+            <li><img src="https://en.js.cx/carousel/4.png" /></li>
+            <li><img src="https://en.js.cx/carousel/5.png" /></li>
+            <li><img src="https://en.js.cx/carousel/6.png" /></li>
+            <li><img src="https://en.js.cx/carousel/7.png" /></li>
+            <li><img src="https://en.js.cx/carousel/8.png" /></li>
+            <li><img src="https://en.js.cx/carousel/9.png" /></li>
+            <li><img src="https://en.js.cx/carousel/10.png" /></li>
+          </ul>
+        </div>
+        <button class="arrow next">⇨</button>
+      </div>
+
+      <ul class="tree" id="tree">
+        <li>Animals
+          <ul>
+            <li>Mammals
+              <ul>
+                <li>Cows</li>
+                <li>Donkeys</li>
+                <li>Dogs</li>
+                <li>Tigers</li>
+              </ul>
+            </li>
+            <li>Other
+              <ul>
+                <li>Snakes</li>
+                <li>Birds</li>
+                <li>Lizards</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Fishes
+          <ul>
+            <li>Aquarium
+              <ul>
+                <li>Guppy</li>
+                <li>Angelfish</li>
+              </ul>
+            </li>
+            <li>Sea
+              <ul>
+                <li>Sea trout</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Sortable table -->
+      <table id="grid">
+        <thead>
+          <tr>
+            <th data-type="number">Age</th>
+            <th data-type="string">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>John</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Pete</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Ann</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Eugene</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Ilya</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    </div> <!-- container -->
+
+    <script src="https://unpkg.com/mathjs@5.0.0/dist/math.min.js"></script>
+    <!-- <script src="part1.js"></script>
+    <script src="part1End.js"></script> -->
+    <script src="part2_Browser.js"></script>
+  </body>
 </html>
