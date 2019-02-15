@@ -99,82 +99,150 @@
         <button class="arrow next">⇨</button>
       </div>
 
-      <ul class="tree" id="tree">
-        <li>Animals
-          <ul>
-            <li>Mammals
-              <ul>
-                <li>Cows</li>
-                <li>Donkeys</li>
-                <li>Dogs</li>
-                <li>Tigers</li>
-              </ul>
-            </li>
-            <li>Other
-              <ul>
-                <li>Snakes</li>
-                <li>Birds</li>
-                <li>Lizards</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>Fishes
-          <ul>
-            <li>Aquarium
-              <ul>
-                <li>Guppy</li>
-                <li>Angelfish</li>
-              </ul>
-            </li>
-            <li>Sea
-              <ul>
-                <li>Sea trout</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+      <br /><br />
+      <div class="card">
+        <ul
+          class="tree list-div"
+          id="tree"
+          style="padding: 2rem 5rem; margin: 0;"
+        >
+          <li>
+            Animals
+            <ul>
+              <li>
+                Mammals
+                <ul>
+                  <li>Cows</li>
+                  <li>Donkeys</li>
+                  <li>Dogs</li>
+                  <li>Tigers</li>
+                </ul>
+              </li>
+              <li>
+                Other
+                <ul>
+                  <li>Snakes</li>
+                  <li>Birds</li>
+                  <li>Lizards</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Fishes
+            <ul>
+              <li>
+                Aquarium
+                <ul>
+                  <li>Guppy</li>
+                  <li>Angelfish</li>
+                </ul>
+              </li>
+              <li>
+                Sea
+                <ul>
+                  <li>Sea trout</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Sortable table -->
+        <div style="padding: 3rem 5rem; border-radius: 10px;">
+          <table id="grid">
+            <thead>
+              <tr>
+                <th data-type="number">Age</th>
+                <th data-type="string">Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5</td>
+                <td>John</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Pete</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Ann</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Eugene</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Ilya</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <ul class="event-class" onclick="greenEvent(event)">
+        <li>Juan Mata</li>
+        <li>Lauren James</li>
+        <li>David De Gea</li>
+        <li>Alex Greenwood</li>
       </ul>
 
-      <!-- Sortable table -->
-      <table id="grid">
-        <thead>
-          <tr>
-            <th data-type="number">Age</th>
-            <th data-type="string">Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>5</td>
-            <td>John</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Pete</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>Ann</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>Eugene</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Ilya</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="margin: 2rem 5rem;">
+        <div id="slider" class="slider">
+          <div class="thumb"></div>
+        </div>
+      </div>
 
+      <div id="react-app"></div>
 
+      <select id="genres">
+        <option value="rock">Rock</option>
+        <option value="blues" selected>Blues</option>
+      </select>
+      <br /><br />
 
-    </div> <!-- container -->
+      <div id="switchContent">
+        This is the original content
+      </div>
+
+      <br><br>
+    </div>
+    <!-- container -->
 
     <script src="https://unpkg.com/mathjs@5.0.0/dist/math.min.js"></script>
     <!-- <script src="part1.js"></script>
     <script src="part1End.js"></script> -->
     <script src="part2_Browser.js"></script>
+
+
+    <!-- <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+
+    <!-- <script type="text/babel">
+      class App extends React.Component {
+        render() {
+          return (
+            <div className="alert alert-info">
+              <h1>Hello there, this is from React</h1>
+              <p> {Math.round(Math.random() * 10)}</p>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("react-app"));
+    </script> -->
   </body>
 </html>

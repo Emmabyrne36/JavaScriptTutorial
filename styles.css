@@ -1,8 +1,13 @@
+body {
+    width: 100%;
+    height: 100%
+}
+
 #field {
     width: 200px;
     height: 150px;
     border: 10px solid black;
-    background-color: #00ff00;
+    background-color: #2bc72b;
     overflow: hidden;
     cursor: pointer;
     position: relative;
@@ -130,24 +135,125 @@ p {
 
 .tree span:hover {
     font-weight: bold;
-  }
+}
 
-  .tree span {
+.tree span {
     cursor: pointer;
-  }
+}
 
 
-  /* Sortable Table */
-  table {
+/* Sortable Table */
+table {
     border-collapse: collapse;
-  }
-  th, td {
+}
+
+th,
+td {
     border: 1px solid black;
     padding: 4px;
-  }
-  th {
+}
+
+th {
     cursor: pointer;
-  }
-  th:hover {
+}
+
+th:hover {
     background: yellow;
-  }
+}
+
+
+.tooltip {
+    position: fixed;
+    padding: 10px 20px;
+    border: 1px solid #b3c9ce;
+    border-radius: 4px;
+    text-align: center;
+    font: italic 14px/1.3 sans-serif;
+    color: #333;
+    background: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+
+.event-class li {
+    cursor: pointer;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+
+
+.tooltip {
+    position: fixed;
+    z-index: 100;
+    padding: 10px 20px;
+    border: 1px solid #b3c9ce;
+    border-radius: 4px;
+    text-align: center;
+    font: italic 14px/1.3 sans-serif;
+    color: #333;
+    background: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+
+#house {
+    margin-top: 50px;
+    width: 400px;
+    border: 1px solid brown;
+}
+
+#roof {
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 20px solid brown;
+    margin-top: -20px;
+}
+
+p {
+    text-align: justify;
+    margin: 10px 3px;
+}
+
+.card {
+    width: 100%;
+    border-radius: 10px;
+    /* padding: 2rem; */
+    /* border: 1px solid #888888; */
+    box-shadow: 0.5px 0.5px 5px 3px #cecece;
+}
+
+.list-div {
+    background-color: #EEEDEF;
+    padding: 2rem;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #626061;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    border-radius: 10px 10px 0 0;
+}
+
+.slider {
+    border-radius: 5px;
+    background: #E0E0E0;
+    background: linear-gradient(left top, #E0E0E0, #EEEEEE);
+    width: 310px;
+    height: 15px;
+    margin: 5px;
+}
+  
+.thumb {
+    width: 10px;
+    height: 25px;
+    border-radius: 3px;
+    position: relative;
+    left: 10px;
+    top: -5px;
+    background: blue;
+    cursor: pointer;
+}
