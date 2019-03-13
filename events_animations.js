@@ -320,7 +320,6 @@ function animatePlane() {
 animatePlane();
 
 function showCircle(cx, cy, radius) {
-  console.log('in the method');
   let div = document.createElement('div');
   div.style.width = 0;
   div.style.height = 0;
@@ -333,6 +332,10 @@ function showCircle(cx, cy, radius) {
     div.style.width = radius * 2 + 'px';
     div.style.height = radius * 2 + 'px';
   }, 0);
+}
+
+function removeCircle() {
+  document.querySelector('.circle').remove();
 }
 
 function bouncingBall() {

@@ -1,261 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <!-- <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AixcH93GJ4uBd_CimDK4hgDkA8OgFGacaTnOwoIvknaK_8PIXo6J1ma_NE0USGgY'></script> -->
-  </head>
 
-  <body style="height:2000px">
-    <div class="container">
-      <br />
-      <div class="jumbotron"><h1>Look in the log ~~~~></h1></div>
+<head>
+  <meta charset="utf-8" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <!-- <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AixcH93GJ4uBd_CimDK4hgDkA8OgFGacaTnOwoIvknaK_8PIXo6J1ma_NE0USGgY'></script> -->
+</head>
 
-      <br /><br />
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">JavaScript Fundamentals</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="events.html">Document, Events and Animations</a>
+      </li>
+    </ul>
+  </nav>
 
-      <div id="field" onclick="moveBall(event)">
-        <img src="https://en.js.cx/clipart/ball.svg" id="ball" /> . . . . . . .
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . . . . . . . . . . . .
-      </div>
-
-      <br /><br />
-
-      <div id="menu" onclick="showHide()">
-        <div id="greenArrow">▶</div>
-        ▼ Sweeties (click me)!
-      </div>
-      <ul id="listMenu">
-        <li>Cake</li>
-        <li>Donut</li>
-        <li>Honey</li>
-      </ul>
-
-      <div id="paneContainer">
-        <div class="pane">
-          <!-- <p onclick="removeP(event)" class="remove-button">[X]</p> -->
-          <h3>Horse</h3>
-          <p>
-            The horse is one of two extant subspecies of Equus ferus. It is an
-            odd-toed ungulate mammal belonging to the taxonomic family Equidae.
-            The horse has evolved over the past 45 to 55 million years from a
-            small multi-toed creature, Eohippus, into the large, single-toed
-            animal of today.
-          </p>
-          <button class="remove-button">[x]</button>
-        </div>
-        <div class="pane">
-          <!-- <p onclick="removeP(event)" class="remove-button">[X]</p> -->
-          <h3>Donkey</h3>
-          <p>
-            The donkey or ass (Equus africanus asinus) is a domesticated member
-            of the horse family, Equidae. The wild ancestor of the donkey is the
-            African wild ass, E. africanus. The donkey has been used as a
-            working animal for at least 5000 years.
-          </p>
-          <button class="remove-button">[x]</button>
-        </div>
-        <div class="pane">
-          <!-- <p onclick="removeP(event)" class="remove-button">[X]</p> -->
-          <h3>Cat</h3>
-          <p>
-            The domestic cat (Latin: Felis catus) is a small, typically furry,
-            carnivorous mammal. They are often called house cats when kept as
-            indoor pets or simply cats when there is no need to distinguish them
-            from other felids and felines. Cats are often valued by humans for
-            companionship and for their ability to hunt vermin.
-          </p>
-          <button class="remove-button">[x]</button>
-        </div>
-      </div>
-
-      <br /><br />
-      <div id="carousel" class="carousel">
-        <button class="arrow prev">⇦</button>
-        <div class="gallery">
-          <ul class="images">
-            <li><img src="https://en.js.cx/carousel/1.png" /></li>
-            <li><img src="https://en.js.cx/carousel/2.png" /></li>
-            <li><img src="https://en.js.cx/carousel/3.png" /></li>
-            <li><img src="https://en.js.cx/carousel/4.png" /></li>
-            <li><img src="https://en.js.cx/carousel/5.png" /></li>
-            <li><img src="https://en.js.cx/carousel/6.png" /></li>
-            <li><img src="https://en.js.cx/carousel/7.png" /></li>
-            <li><img src="https://en.js.cx/carousel/8.png" /></li>
-            <li><img src="https://en.js.cx/carousel/9.png" /></li>
-            <li><img src="https://en.js.cx/carousel/10.png" /></li>
-          </ul>
-        </div>
-        <button class="arrow next">⇨</button>
-      </div>
-
-      <br /><br />
-      <div class="card">
-        <ul
-          class="tree list-div"
-          id="tree"
-          style="padding: 2rem 5rem; margin: 0;"
-        >
-          <li>
-            Animals
-            <ul>
-              <li>
-                Mammals
-                <ul>
-                  <li>Cows</li>
-                  <li>Donkeys</li>
-                  <li>Dogs</li>
-                  <li>Tigers</li>
-                </ul>
-              </li>
-              <li>
-                Other
-                <ul>
-                  <li>Snakes</li>
-                  <li>Birds</li>
-                  <li>Lizards</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            Fishes
-            <ul>
-              <li>
-                Aquarium
-                <ul>
-                  <li>Guppy</li>
-                  <li>Angelfish</li>
-                </ul>
-              </li>
-              <li>
-                Sea
-                <ul>
-                  <li>Sea trout</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- Sortable table -->
-        <div style="padding: 3rem 5rem; border-radius: 10px;">
-          <table id="grid">
-            <thead>
-              <tr>
-                <th data-type="number">Age</th>
-                <th data-type="string">Name</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>5</td>
-                <td>John</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Pete</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>Ann</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Eugene</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Ilya</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <br /><br />
-
-      <ul class="event-class" onclick="greenEvent(event)">
-        <li>Juan Mata</li>
-        <li>Lauren James</li>
-        <li>David De Gea</li>
-        <li>Alex Greenwood</li>
-      </ul>
-
-      <div style="margin: 2rem 5rem;">
-        <div id="slider" class="slider">
-          <div class="thumb"></div>
-        </div>
-      </div>
-
-      <div id="react-app"></div>
-
-      <select id="genres">
-        <option value="rock">Rock</option>
-        <option value="blues" selected>Blues</option>
-      </select>
-      <br /><br />
-
-      <div id="switchContent">
-        This is the original content
-      </div>
-
-      <br /><br />
-
-      <img id="flyjet" src="https://en.js.cx/clipart/flyjet.jpg" />
-      <br><br>
-
-      <button class="btn btn-primary" onclick="showCircle(150,150,100)">Show Circle</button>
-
-      <br><br>
-      <div id="bounceField">
-        <img src="https://js.cx/clipart/ball.svg" width="40" height="40" id="bounceBall">
-      </div>
+  <div class="container">
+    <br>
+    <div>
+      <h1>Look in the console></h1>
+      <p>Un-comment methods in the fundamentals.js file to see the functionality in the console</p>
     </div>
+  </div>
 
-    <br><br>
+  <script src="https://unpkg.com/mathjs@5.0.0/dist/math.min.js"></script>
+  <script src="fundamentals.js"></script>
+  <script src="https://js.cx/libs/animate.js"></script>
 
-    <!-- container -->
+</body>
 
-    <script src="https://unpkg.com/mathjs@5.0.0/dist/math.min.js"></script>
-    <!-- <script src="part1.js"></script>
-    <script src="part1End.js"></script> -->
-    <script src="part2_Browser.js"></script>
-    <script src="https://js.cx/libs/animate.js"></script>
-
-    <!-- <script
-      crossorigin
-      src="https://unpkg.com/react@16/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-    ></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
-
-    <!-- <script type="text/babel">
-      class App extends React.Component {
-        render() {
-          return (
-            <div className="alert alert-info">
-              <h1>Hello there, this is from React</h1>
-              <p> {Math.round(Math.random() * 10)}</p>
-            </div>
-          );
-        }
-      }
-
-      ReactDOM.render(<App />, document.getElementById("react-app"));
-    </script> -->
-  </body>
 </html>
